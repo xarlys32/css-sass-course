@@ -1,0 +1,18 @@
+// Archivo para las cosas basicas del DOM y es parcial(por eso empieza por '_' para luego importarlo al sass principal
+// Estructura 7 - 1
+// lo importaremos en main como @import 'base/base';
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
