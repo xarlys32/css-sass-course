@@ -1,6 +1,7 @@
 // Para centrar en el viewport se usa margin 0 auto
 .row {
-    max-width: 114rem;
+    max-width: $grid-width;
     background-color: #eee;
     margin: 0 auto;
+    margin-bottom: $gutter-vertical;
 }
