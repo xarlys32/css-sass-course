@@ -2,7 +2,7 @@
 // Con &:not(:last-child) seleccionaremos todo salvo el ultimo child
 .row {
     max-width: $grid-width;
-    background-color: #eee;
+    //background-color: #eee;
     margin: 0 auto;
 
     &:not(:last-child){
@@ -14,7 +14,7 @@
 //La expresion class^="col-"] seleccionara todos los elementso que contengan ese atributo y empiecen por col
     @include clearfix;
     [class^="col-"] {
-        background-color: orangered;
+        //background-color: orangered;
         float: left;
 
         &:not(:last-child){
