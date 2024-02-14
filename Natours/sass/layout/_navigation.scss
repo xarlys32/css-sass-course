@@ -13,6 +13,8 @@
     border-radius: 50%;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+    text-align: center;
+    cursor: pointer;
   }
 
   //fixed sirve para no cambiar la posicion a medidad que nos movemos por la pagina
@@ -96,5 +98,57 @@
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;
+  }
+
+  &__icon {
+    position: relative;
+    margin-top: 3rem;
+
+    &,
+    &::before,
+    &::after{
+      width: 3.5rem;
+      height: 2px;
+      background-color: $color-grey-dark3;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+
+    &::before {
+      top: -.8rem;
+    }
+
+    &::after {
+      top: .8rem;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem
+  }
+
+  &__checkbox:checked + &__button &__icon{
+    background-color: transparent;
+  }
+// Si quiesieramos que la rotacion fuera desde un lado concreto en vez del centro, usariamos transform-origin
+  &__checkbox:checked + &__button &__icon::before{
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after{
+    top: 0;
+    transform: rotate(-135deg);
   }
 }
