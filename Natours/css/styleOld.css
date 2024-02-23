@@ -18,7 +18,7 @@ Dark green: #28b485
 }
 
 /* Para usar rem es necesario un font-size en la raiz del documento, vease html*/
-/* Es mala pracica poner el root fontsize con pixel, pq deshabilitas la posibilidad de que el usuario aumente o disminuya el tamaño de la fuente*/
+/* Es mala practica poner el root fontsize con pixel, pq deshabilitas la posibilidad de que el usuario aumente o disminuya el tamaño de la fuente*/
 /* por defecto el valor de font size es 16px pero lo cambiamos a 10px que seria 10/16*100 = 62.5%*/
 html {
   font-size: 62.5%;

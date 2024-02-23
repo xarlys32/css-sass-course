@@ -1,15 +1,48 @@
 // este clear fix añadira un seudoelemento al final que borrara los flotantes
 @mixin clearfix {
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }
 
 @mixin absCenter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// content seria el el bloque que le pasaras como si fuese una funcion
+// 1 em = 16px
+// order - base typography -general layout - grid - page layout - components
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    //600px
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    //900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    //1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    //1800px
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
 }
