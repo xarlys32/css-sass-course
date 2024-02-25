@@ -7,6 +7,14 @@
 
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
+
+    @include respond(tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem;
     }
 // Añadimos el #{} debido a que estamos usando una variable sass dentro d euna funcion de css
 // La row tiene 0 px de altura debido a que todos los hijos tienen el float pr lo que la altura colapsa y se pone a 0
@@ -14,12 +22,20 @@
 //La expresion class^="col-"] seleccionara todos los elementso que contengan ese atributo y empiecen por col
     @include clearfix;
     [class^="col-"] {
-        //background-color: orangered;
         float: left;
 
         &:not(:last-child){
             margin-right: $gutter-horizontal;
+
+            @include respond(tab-port) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
         }  
+
+        @include respond(tab-port) {
+            width: 100% !important;
+        }
     }
     .col-1-of-2 {
         width: calc((100% - #{$gutter-horizontal}) / 2);

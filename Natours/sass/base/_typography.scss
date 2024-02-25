@@ -1,3 +1,10 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-gray-dark;
+}
+
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
@@ -14,6 +21,11 @@
     animation-name: moveInLeft;
     animation-duration: 3s;
     animation-timing-function: ease-in;
+
+    @include respond(phone) {
+      font-family: 5rem;
+      letter-spacing: 1rem;      
+    }
   }
 
   &--sub {
@@ -23,15 +35,11 @@
     letter-spacing: 1.7rem;
 
     animation: moveInRight 3s ease-out;
-  }
-}
 
-body {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: $color-gray-dark;
-  padding: 3rem;
+    @include respond(phone) {
+      letter-spacing: .5rem;      
+    }
+  }
 }
 
 // Usamos el background clip paara aplicar el color gradient al text y no al fondo
@@ -49,6 +57,14 @@ body {
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 3rem;      
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;      
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
