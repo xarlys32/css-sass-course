@@ -13,10 +13,11 @@
     top: 0;
     left: 0;
     width: 100%;
-    // esta propiedad tambien oculta la parte de atras d eun elemento, en este caso evitara que se solapen
+    // esta propiedad tambien oculta la parte de atras de un elemento, en este caso evitara que se solapen
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
-    // usamos esta propiedad debido a que la imagen hara overflow y no se veera el borde redondeado
+    // usamos esta propiedad debido a que la imagen hara overflow y no se v era el borde redondeado
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
