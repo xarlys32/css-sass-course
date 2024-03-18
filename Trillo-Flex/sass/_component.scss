@@ -84,7 +84,7 @@
   }
 
   &__notification {
-    font-size: .8rem;
+    font-size: 0.8rem;
     height: 1.75rem;
     width: 1.75rem;
     border-radius: 50%;
@@ -110,4 +110,24 @@
 
   &__user-name {
   }
+}
+
+.side-nav {
+  &__item {
+  }
+
+  &__link {
+  }
+
+  &__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
+
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2.5rem;
+  color: var(--color-grey-light-4);
 }
